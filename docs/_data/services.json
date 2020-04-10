@@ -1,0 +1,116 @@
+[
+
+  {
+    "provider": "Kapsi Internet-käyttäjät Ry",
+    "name": "Kapsin jäsenyys",
+    "href": "https://www.kapsi.fi/liityjaseneksi.html",
+    "price_start": null,
+    "price_month": null,
+    "price_year": {
+      "sum": 40,
+      "vat": 0
+    },
+    "conditions": "Ei kaupallista toimintaa.",
+    "ft_disk": 50,
+    "ft_shell": 2,
+    "ft_backup": true,
+    "ft_backup_disk": 500,
+    "ft_apache": true,
+    "ft_php5": true,
+    "ft_mysql": 1,
+    "ft_postgresql": 1,
+    "ft_python": true,
+    "ft_ror": true,
+    "ft_dns": true,
+    "ft_domain": false,
+    "ft_email": 5,
+    "ft_ssi": true,
+    "delivery_days": 3
+  },
+  {
+    "provider": "Kapsi Internet-käyttäjät Ry",
+    "name": "Kapsin juniorjäsenyys",
+    "href": "https://www.kapsi.fi/liityjaseneksi.html",
+    "price_start": null,
+    "price_month": null,
+    "price_year": {
+      "sum": 10,
+      "vat": 0
+    },
+    "conditions": "Ikävaatimus 20 vuotta ja nuoremmat. Ei kaupallista toimintaa.",
+    "ft_disk": 50,
+    "ft_shell": 2,
+    "ft_backup": true,
+    "ft_backup_disk": 500,
+    "ft_apache": true,
+    "ft_php5": true,
+    "ft_mysql": 1,
+    "ft_postgresql": 1,
+    "ft_python": true,
+    "ft_ror": true,
+    "ft_dns": true,
+    "ft_domain": false,
+    "ft_email": 5,
+    "ft_ssi": true,
+    "delivery_days": 3
+  },
+  {
+    "provider": "Kapsi Internet-käyttäjät Ry",
+    "name": "Kapsin yhteisöjäsenyys",
+    "href": "https://www.kapsi.fi/liityjaseneksi.html",
+    "price_start": null,
+    "price_month": null,
+    "price_year": {
+      "sum": 70,
+      "vat": 0
+    },
+    "conditions": "Ei kaupallista toimintaa.",
+    "ft_disk": 50,
+    "ft_shell": 2,
+    "ft_backup": true,
+    "ft_backup_disk": 500,
+    "ft_apache": true,
+    "ft_php5": true,
+    "ft_mysql": 1,
+    "ft_postgresql": 1,
+    "ft_python": true,
+    "ft_ror": true,
+    "ft_dns": true,
+    "ft_domain": false,
+    "ft_email": 5,
+    "ft_ssi": true,
+    "delivery_days": 3
+  },
+
+  {
+    "provider": "Sendanor",
+    "name": "Titan 2 GB -webhotelli",
+    "href": "https://holvi.com/shop/sendanor/product/d2bb42b5f8bfc72226edf4c736d4fdbb/",
+    "price_start": null,
+    "price_month": {
+      "sum": 2.5,
+      "vat": 0.24
+    },
+    "price_year": {
+      "sum": 25,
+      "vat": 0.24
+    },
+    "conditions": "",
+    "ft_disk": 2,
+    "ft_shell": 0,
+    "ft_backup": true,
+    "ft_backup_disk": 0,
+    "ft_apache": true,
+    "ft_php5": true,
+    "ft_mysql": true,
+    "ft_postgresql": true,
+    "ft_python": true,
+    "ft_ror": true,
+    "ft_dns": true,
+    "ft_domain": false,
+    "ft_email": 0,
+    "ft_ssi": true,
+    "delivery_days": 0
+  }
+
+]
