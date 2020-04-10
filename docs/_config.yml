@@ -1,0 +1,16 @@
+title: hostingvertailu.info
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - vendor
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+lang: fi

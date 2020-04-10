@@ -1,0 +1,25 @@
+{
+  "name": "hostingvertailu.info",
+  "version": "1.0.0",
+  "description": "Hosting Provider Info Website",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "install": "gem install --user-install bundler jekyll jekyll-feed && bundle install --path vendor/bundle",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bundle exec jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norjs/hostingvertailu.info.git"
+  },
+  "author": "Jaakko Heusala <jheusala@iki.fi>",
+  "license": "AGPL",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/norjs/hostingvertailu.info/issues"
+  },
+  "homepage": "https://github.com/norjs/hostingvertailu.info#readme"
+}

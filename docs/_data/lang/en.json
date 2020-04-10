@@ -1,0 +1,26 @@
+{
+  "gtag": "UA-22467175-4",
+  "locale": "en_US",
+  "siteUrl": "https://hostingvertailu.info",
+  "siteTitle": "Welcome!",
+  "languages": {
+    "en": "English",
+    "fi": "Suomeksi"
+  },
+  "nav": {
+    "items": [
+      {
+        "href": "/",
+        "label": "Index"
+      }
+    ]
+  },
+  "about": {
+    "title": "about.title",
+    "summary": "about.summary",
+  },
+  "footer": {
+    "copyright": "Copyright",
+    "author": "Sendanor"
+  }
+}

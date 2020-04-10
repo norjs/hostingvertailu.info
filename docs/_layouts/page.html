@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{%- assign className = site.data.className -%}
+
+{%- include header.html %}
+
+<section>
+
+    <div class="{{ className.navContent }}">
+
+        {% include nav.html %}
+
+        <aside>
+            {%- include latest-posts.html -%}
+        </aside>
+
+    </div>
+
+    <div class="{{ className.primaryContent }}">
+
+        {{ content }}
+
+    </div>
+
+</section>
+
+{% include footer.html -%}

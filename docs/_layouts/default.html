@@ -1,0 +1,59 @@
+{%- assign className = site.data.className -%}
+
+{%- capture pageTitle -%}
+{%- include common/translate.html key=page.title -%}
+{%- endcapture -%}
+
+{%- capture pageDescription -%}
+{%- include common/translate.html key=page.description -%}
+{%- endcapture -%}
+
+{%- assign title = pageTitle | default: "Default" | append: " | Sendanor" -%}
+{%- assign description = pageDescription | default: "" -%}
+{%- assign image = page.image | default: "/assets/images/site-image.jpg" | absolute_url -%}
+{%- assign url = page.url | absolute_url -%}
+
+{%- assign translation = site.data.lang[site.lang] -%}
+
+{%- assign gtag = translation.gtag -%}
+
+<!doctype html>
+
+<html lang="{{ site.lang | default: "en" }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ title | default: "profile" }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/assets/images/site-image.jpg">
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:locale" content="{{ translation.locale }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:image:alt" content="Background Image">
+    <meta property="og:url" content="{{ url }}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ gtag | urlencode }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ gtag }}');
+    </script>
+
+</head>
+<body>
+
+{{ content }}
+
+</body>
+</html>

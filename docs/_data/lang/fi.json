@@ -1,0 +1,26 @@
+{
+  "gtag": "UA-22467175-4",
+  "locale": "fi_FI",
+  "siteUrl": "https://hostingvertailu.info",
+  "siteTitle": "hostingvertailu.info",
+  "languages": {
+    "en": "English",
+    "fi": "Finnish"
+  },
+  "nav": {
+    "items": [
+      {
+        "href": "/",
+        "label": "Etusivu"
+      }
+    ]
+  },
+  "about": {
+    "title": "Hostingvertailu.info",
+    "summary": ""
+  },
+  "footer": {
+    "copyright": "Copyright",
+    "author": "Sendanor"
+  }
+}

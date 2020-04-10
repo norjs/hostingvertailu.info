@@ -1,0 +1,21 @@
+{%- comment %}
+
+  Translates keyword to translated content.
+
+  With current language (from `site.lang`): {% include common/translate.html key="about.title" %}
+
+  Or with language: {% include common/translate.html key="about.title" lang="en" %}
+
+{% endcomment -%}
+
+{%- assign key = include.key -%}
+
+{%- assign lang = include.lang | default: site.lang | default: "en" -%}
+
+{%- assign translation = site.data.lang[lang] -%}
+
+{%- if key -%}
+  {%- include common/get-property.html value=translation key=key default=key -%}
+{%- else -%}
+  No "key" provided to translate partial.
+{%- endif -%}

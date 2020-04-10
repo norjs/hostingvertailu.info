@@ -1,0 +1,43 @@
+{%- comment -%}
+
+  This works like Lodash's `_.get(value, key)`, where `value` can be an object and `key` a string path to specific value.
+
+  Use it like:
+
+    {% capture title %}{% include common/get-property.html value="translation" key="about.title" %}{% endcapture %}
+
+{%- endcomment -%}
+
+{%- if include.value and include.key and include.key != "" -%}
+
+  {%- assign defaultValue = include.default | default: "" -%}
+  {%- assign value = include.value -%}
+  {%- assign keys = include.key | split: "." -%}
+
+  {%- for key in keys -%}
+
+    {%- unless key -%}
+      {{ defaultValue }}
+      {%- break -%}
+    {%- endunless -%}
+
+    {%- assign value = value[key] -%}
+
+    {%- unless value -%}
+      {{ defaultValue }}
+      {%- break -%}
+    {%- endunless -%}
+
+    {%- if forloop.last -%}
+
+      {{ value | default: defaultValue }}
+
+    {%- endif -%}
+
+  {%- endfor -%}
+
+{%- else -%}
+
+  No "value" and/or "key" property provided to get-property partial
+
+{%- endif -%}

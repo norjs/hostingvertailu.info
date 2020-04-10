@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{%- assign className = site.data.className -%}
+
+{%- include header.html %}
+
+<section>
+
+    <div class="{{ className.navContent }}">
+
+        <aside>
+            {%- include latest-posts.html -%}
+        </aside>
+
+    </div>
+
+    <div class="{{ className.primaryContent }}">
+
+        <div class="{{ className.pageDate }}">{{ page.date | date: '%B %d, %Y' }}</div>
+
+        {{ content }}
+
+    </div>
+
+</section>
+
+{% include footer.html -%}

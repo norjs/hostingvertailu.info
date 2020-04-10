@@ -1,0 +1,12 @@
+{
+  "headerLogo"           : ".s-hl",
+  "textHeightImage"      : ".s-thi",
+  "verticalNav"          : ".s-nv",
+  "navItem"              : ".s-ni",
+  "selectedNavItem"      : ".s-sni",
+  "navContent"           : ".s-nc",
+  "primaryContent"       : ".s-pc",
+  "secondaryContent"     : ".s-sc",
+  "mascot"               : ".s-m",
+  "pageDate"             : ".s-pd"
+}
