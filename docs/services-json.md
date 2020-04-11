@@ -8,6 +8,8 @@ Jos olette palveluntarjoaja ja haluatte meidän lisäävän puolestanne tietoja 
 [asiakaspalveluumme](https://ohjelmistoarkkitehti.fi/). Tästä veloitamme kuitenkin työn perusteella tuntihinnastomme 
 mukaisen korvauksen.
 
+Muutoksia tai lisäkenttiä dataformaattiin voi ehdottaa [Githubissa](https://github.com/sendanor/hostingvertailu.info/issues).
+
 ### [`services.json`](https://github.com/sendanor/hostingvertailu.info/blob/master/docs/_data/services.json)
 
  * `provider` -- Palveluntarjoaja
