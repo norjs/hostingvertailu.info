@@ -32,6 +32,13 @@
                     | {{ service.conditions }}
                     {%- endif -%}
 
+                    {% if service.ft_noncommercial %}
+                    <span class="fa-stack">
+                      <i class="fa fa-credit-card fa-stack-1x"></i>
+                      <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                    </span>
+                    {% endif %}
+
                 </td>
                 <td class="{{ className.disk }}">{{ service.ft_disk }} GB</td>
                 <td class="{{ className.price }}">{{ service.price_year.sum | round }} €</td>
