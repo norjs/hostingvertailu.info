@@ -36,27 +36,24 @@ Muutoksia tai lisäkenttiä dataformaattiin voi ehdottaa [Githubissa](https://gi
  * `ft_phpmyadmin` -- Boolean. Onko tietokannoilla käytettävissä PHPMyAdmin?
  * `ft_webmail` -- Boolean. Onko webbipohjainen sähköpostiohjelma käytettävissä sähköpostilla?
  * `ft_email` -- Numero. Montako sähköpostilaatikkoa palveluun sisältyy?
- * `ft_pop3` -- Boolean. Onko POP3 käytettävissä sähköpostilla?
- * `ft_imap` -- Boolean. Onko IMAP käytettävissä sähköpostilla?
- * `ft_mutt` -- Boolean. Onko `mutt` -ohjelma käytettävissä?
- * `ft_alpine` -- Onko `alpine` -ohjelma käytettävissä?
- * `ft_shell` -- Shellitunnuksien määrä, jotka toimivat myös pitkäkestoisten ohjelmien ajamiseen, esimerkiksi IRC-käytössä.
- * `ft_backup` -- Varmuuskopioidaanko levytila?
- * `ft_backup_disk` -- Sisältyykö hintaan ylimääräistä varmuuskopiotilaa, ja kuinka paljon gigatavuissa?
- * `ft_apache` -- Onko webbipalvelimella Apache? Eli tavalliset `.htaccess` -asetukset ja `mod_rewrite` toimivat.
- * `ft_php5` -- Onko palvelimella tukea PHP5:lle?
- * `ft_mysql` -- Sisältyykö palveluun MySQL-tietokantoja?
- * `ft_postgresql` -- Sisältyykö palveluun PostgreSQL-tietokantoja?
- * `ft_python` -- Onko palvelimella Python-tukea?
- * `ft_ror` -- Onko palvelimella Ruby On Rails -tukea?
+ * `ft_pop3` -- Boolean. Onko POP3 käytettävissä sähköpostilaatikoilla?
+ * `ft_imap` -- Boolean. Onko IMAP käytettävissä sähköpostilaatikoilla?
+ * `ft_mutt` -- Boolean. Onko `mutt` -ohjelma käytettävissä sähköpostin lukemiseen shellissä?
+ * `ft_alpine` -- Boolean. Onko `alpine` -ohjelma käytettävissä sähköpostin lukemiseen shellissä?
+ * `ft_shell` -- Numero. Shellitunnuksien määrä, jotka toimivat myös pitkäkestoisten ohjelmien ajamiseen, esimerkiksi IRC-käytössä.
+ * `ft_backup` -- Boolean. Varmuuskopioidaanko levytila lisämaksutta? (Palautus voi olla lisämaksullinen.)
+ * `ft_backup_disk` -- Numero. Sisältyykö hintaan ylimääräistä varmuuskopiotilaa, ja kuinka paljon gigatavuissa? Tämä on ylimääräistä levytilaa, jonka käyttäjä itse ottaa käyttöön.
+ * `ft_apache` -- Boolean. Onko webbipalvelimella Apache? Eli tavalliset `.htaccess` -asetukset ja `mod_rewrite` toimivat.
+ * `ft_php` -- Boolean. Onko palvelimella tukea PHP:lle?
+ * `ft_php7` -- Boolean. Onko palvelimella tukea PHP7:lle?
+ * `ft_php5` -- Boolean. Onko palvelimella tukea PHP5:lle?
+ * `ft_mysql` -- Numero. Sisältyykö palveluun MySQL-tietokantoja?
+ * `ft_postgresql` -- Numero. Sisältyykö palveluun PostgreSQL-tietokantoja?
+ * `ft_python` -- Boolean. Onko palvelimella Python-tukea?
+ * `ft_ror` -- Boolean. Onko palvelimella Ruby On Rails -tukea?
  * `ft_dns` -- Numero. Monelleko verkkotunnukselle palveluun sisältyy nimipalvelimet?
  * `ft_domain` -- Numero. Monelleko verkkotunnukselle palveluun sisältyy rekisteröintimaksu ilman lisämaksua?
- * `ft_ssi` -- Onko webpalvelimella käytettävissä SSI-tukea?
- * `ft_traffic` -- Liikenteen suositeltu määrä tai maksimimäärä (GB/kk)
- * `delivery_days` -- Kuinka monessa päivässä viimeistään tilaus käsitellään?
+ * `ft_ssi` -- Boolean. Onko webpalvelimella käytettävissä SSI-tukea?
+ * `ft_traffic` -- Numero. Liikenteen suositeltu määrä tai maksimimäärä ennen lisämaksua (GB/kk)
+ * `delivery_days` -- Numero. Kuinka monessa päivässä viimeistään tilaus käsitellään?
  
-`ft_` -alkuiset arvot voivat olla: 
-
- * `false` tai `null` -- Ominaisuus ei ole käytettävissä
- * `true` -- Ominaisuus on käytettävissä, eikä kappalemäärällä ole ylärajaa.
- * `N` -- Numero, joka kertoo kappalemäärän ylärajan.
