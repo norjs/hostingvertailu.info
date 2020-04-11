@@ -176,7 +176,7 @@
     "ft_postgresql": true,
     "ft_python": true,
     "ft_ror": true,
-    "ft_dns": 0,
+    "ft_dns": 1,
     "ft_domain": 0,
     "ft_email": 0,
     "ft_webmail": false,
