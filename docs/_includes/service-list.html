@@ -50,6 +50,26 @@
                     <span class="sr-only">Varmuuskopiointi sisältyy hintaan</span>
                     {% endif %}
 
+                    {% if service.ft_mysql or service.ft_postgresql %}
+
+                        {% if service.ft_mysql and service.ft_postgresql %}
+                            {% assign db_title="Tietokanta sisältyy hintaan (MySQL/PostgreSQL)" %}
+                        {% elsif service.ft_mysql %}
+                            {% assign db_title="Tietokanta sisältyy hintaan (MySQL)" %}
+                        {% else %}
+                            {% assign db_title="Tietokanta sisältyy hintaan (PostgreSQL)" %}
+                        {% endif %}
+
+                        <i class="fa fa-database" title="{{db_title}}"></i>
+                        <span class="sr-only">{{db_title}}</span>
+
+                    {% endif %}
+
+                    {% if service.ft_root %}
+                    <i class="fa fa-unlock-alt" aria-hidden="true" title="Pääkäyttäjän oikeudet käytettävissä (root)"></i>
+                    <span class="sr-only">Pääkäyttäjän oikeudet käytettävissä (root)</span>
+                    {% endif %}
+
                 </td>
                 <td class="{{ className.disk }}">{{ service.ft_disk }} GB</td>
                 <td class="{{ className.price }}">{{ service.price_year.sum | round }} €</td>
