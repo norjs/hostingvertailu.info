@@ -2,7 +2,7 @@
 
 Tämä projekti sijaitsee [Githubissa](https://github.com/sendanor/hostingvertailu.info) AGPL-lisenssillä vapaan lähdekoodin projektina.
 
-Vertailun tietoja voi kuka tahansa päivittää ja otamme muutoksia vastaan pull-requesteja tavalliseen tapaan Githubissa. Tämä on maksutonta.
+Vertailun tietoja voi kuka tahansa päivittää ja otamme muutoksia vastaan pull-requesteina tavalliseen tapaan Githubissa. Tämä on maksutonta.
 
 Jos olette palveluntarjoaja ja haluatte meidän lisäävän puolestanne tietoja avaimet käteen -ratkaisuna, ottakaa yhteyttä 
 [asiakaspalveluumme](https://ohjelmistoarkkitehti.fi/). Tästä veloitamme kuitenkin työn perusteella tuntihinnastomme 
