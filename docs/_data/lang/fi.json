@@ -47,10 +47,20 @@
       }
     },
     "dns" : {
-      "title": "Nimipalvelut"
+      "title": "Nimipalvelut",
+      "summary": "Suomen nimipalvelut vertailussa."
     },
     "shells"    : {
-      "title": "Shellit"
+      "title": "Shellit",
+      "summary": "Suomen shellit vertailussa."
+    },
+    "virtuals"    : {
+      "title": "Virtuaalipalvelimet",
+      "summary": "Suomen virtuaalipalvelimet vertailussa."
+    },
+    "email"    : {
+      "title": "Sähköposti",
+      "summary": "Suomen sähköpostit vertailussa."
     }
   },
   "footer": {

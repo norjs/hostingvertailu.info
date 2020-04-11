@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "products.webhotels.title"
-description: "products.webhotels.summary"
+title: "products.virtuals.title"
+description: "products.virtuals.summary"
 image: /assets/images/site-image.jpg
 ---
 
@@ -9,5 +9,5 @@ image: /assets/images/site-image.jpg
 {%- assign translation = site.data.lang[site.lang] -%}
 {%- assign services = site.data.services | where_exp: "item", "item.ft_virtuals >= 1" -%}
 
-{% include service-list.html services = services %}
+{% include service-list.html type="virtuals" services = services %}
 

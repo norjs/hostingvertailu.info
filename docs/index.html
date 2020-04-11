@@ -9,4 +9,4 @@ image: /assets/images/site-image.jpg
 {%- assign translation = site.data.lang[site.lang] -%}
 {%- assign services = site.data.services | where: "ft_apache", true -%}
 
-{% include service-list.html services = services %}
+{% include service-list.html type="webhotels" services = services %}
