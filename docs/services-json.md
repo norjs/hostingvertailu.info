@@ -1,4 +1,4 @@
-### `services.json`
+### [`services.json`](https://github.com/sendanor/hostingvertailu.info/blob/master/docs/_data/services.json)
 
  * `provider` -- Palveluntarjoaja
  * `name` -- Tuotteen tai palvelun nimi
