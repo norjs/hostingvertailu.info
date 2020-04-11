@@ -32,6 +32,11 @@
                     | {{ service.conditions }}
                     {%- endif -%}
 
+                    {% if service.ft_fi %}
+                    <span class="flag-icon flag-icon-fi" title="Palvelin Suomessa"></span>
+                    <span class="sr-only">Palvelin Suomessa</span>
+                    {% endif %}
+
                     {% if service.ft_noncommercial %}
                     <span class="fa-stack" aria-hidden="true" title="Kaupallinen toiminta kielletty">
                       <i class="fa fa-credit-card fa-stack-1x"></i>
@@ -40,8 +45,9 @@
                     <span class="sr-only">Kaupallinen toiminta kielletty</span>
                     {% endif %}
 
-                    {% if service.ft_fi %}
-                    <span class="flag-icon flag-icon-fi" title="Palvelin Suomessa"></span>
+                    {% if service.ft_backup %}
+                    <i class="fa fa-hdd-o" title="Varmuuskopiointi sisältyy hintaan"></i>
+                    <span class="sr-only">Varmuuskopiointi sisältyy hintaan</span>
                     {% endif %}
 
                 </td>
