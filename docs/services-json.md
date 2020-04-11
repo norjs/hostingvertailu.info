@@ -29,8 +29,8 @@
  * `ft_postgresql` -- Sisältyykö palveluun PostgreSQL-tietokantoja?
  * `ft_python` -- Onko palvelimella Python-tukea?
  * `ft_ror` -- Onko palvelimella Ruby On Rails -tukea?
- * `ft_dns` -- Sisältyykö palveluun verkkotunnuksen nimipalvelimia?
- * `ft_domain` -- Sisältyykö palveluun verkkotunnuksen rekisteröintimaksua ilman lisämaksua?
+ * `ft_dns` -- Numero. Monelleko verkkotunnukselle palveluun sisältyy nimipalvelimet?
+ * `ft_domain` -- Numero. Monelleko verkkotunnukselle palveluun sisältyy rekisteröintimaksu ilman lisämaksua?
  * `ft_email` -- Sisältyykö palveluun sähköpostilaatikoita?
  * `ft_ssi` -- Onko webpalvelimella käytettävissä SSI-tukea?
  * `delivery_days` -- Kuinka monessa päivässä viimeistään tilaus käsitellään?
