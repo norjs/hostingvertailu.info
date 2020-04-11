@@ -75,6 +75,14 @@
                     <span class="sr-only">Sähköpostilaatikoita sisältyy ({{ service.ft_email }} kpl)</span>
                     {% endif %}
 
+                    {% if service.ft_shell >= 1 %}
+                    <i class="fa fa-terminal" aria-hidden="true" title="Shell-tunnus sisältyy hintaan ({{ service.ft_shell }} kpl)"></i>
+                    <span class="sr-only">Shell-tunnus sisältyy hintaan ({{ service.ft_shell }} kpl)</span>
+                    {% elsif service.ft_ssh >= 1 %}
+                    <i class="fa fa-terminal" aria-hidden="true" title="SSH sisältyy hintaan, mutta ei kokonainen shelli ({{ service.ft_ssh }} kpl)"></i>
+                    <span class="sr-only">SSH sisältyy hintaan, mutta ei kokonainen shelli ({{ service.ft_ssh }} kpl)</span>
+                    {% endif %}
+
                 </td>
                 <td class="{{ className.disk }}">{{ service.ft_disk }} GB</td>
                 <td class="{{ className.price }}">{{ service.price_year.sum | round }} €</td>
