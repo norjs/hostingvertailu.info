@@ -40,6 +40,10 @@
                     <span class="sr-only">Kaupallinen toiminta kielletty</span>
                     {% endif %}
 
+                    {% if service.ft_fi %}
+                    <span class="flag-icon flag-icon-fi"></span>
+                    {% endif %}
+
                 </td>
                 <td class="{{ className.disk }}">{{ service.ft_disk }} GB</td>
                 <td class="{{ className.price }}">{{ service.price_year.sum | round }} €</td>
