@@ -20,7 +20,7 @@
  * `ft_noncommercial` -- Jos määritetty, ainoastaan ei-kaupallinen toiminta on sallittua.
  * `ft_phpmyadmin` -- Onko tietokannoilla käytettävissä PHPMyAdmin?
  * `ft_webmail` -- Onko webbipohjainen sähköpostiohjelma käytettävissä sähköpostilla?
- * `ft_pop3` -- Onko webmail käytettävissä sähköpostilla?
+ * `ft_pop3` -- Onko POP3 käytettävissä sähköpostilla?
  * `ft_imap` -- Onko IMAP käytettävissä sähköpostilla?
  * `ft_mutt` -- Onko `mutt` -ohjelma käytettävissä?
  * `ft_alpine` -- Onko `alpine` -ohjelma käytettävissä?
