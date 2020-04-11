@@ -2,6 +2,7 @@ title: hostingvertailu.info
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-money
 exclude:
   - vendor
   - CNAME

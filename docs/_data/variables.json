@@ -1,12 +1,17 @@
 {
-  "headerLogo"           : ".s-hl",
-  "textHeightImage"      : ".s-thi",
-  "verticalNav"          : ".s-nv",
-  "navItem"              : ".s-ni",
-  "selectedNavItem"      : ".s-sni",
-  "navContent"           : ".s-nc",
-  "primaryContent"       : ".s-pc",
-  "secondaryContent"     : ".s-sc",
-  "mascot"               : ".s-m",
-  "pageDate"             : ".s-pd"
+  "headerLogo"           : ".hv-hl",
+  "products"             : ".hv-p",
+  "provider"             : ".hv-pp",
+  "name"                 : ".hv-pn",
+  "disk"                 : ".hv-pi",
+  "price"                : ".hv-pr",
+  "textHeightImage"      : ".hv-thi",
+  "verticalNav"          : ".hv-nv",
+  "navItem"              : ".hv-ni",
+  "selectedNavItem"      : ".hv-sni",
+  "navContent"           : ".hv-nc",
+  "primaryContent"       : ".hv-pc",
+  "secondaryContent"     : ".hv-sc",
+  "mascot"               : ".hv-m",
+  "pageDate"             : ".hv-pd"
 }

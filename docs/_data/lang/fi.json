@@ -11,13 +11,39 @@
     "items": [
       {
         "href": "/",
-        "label": "Etusivu"
+        "label": "Webhotellit"
+      },
+      {
+        "href": "/dns.html",
+        "label": "Nimipalvelut"
+      },
+      {
+        "href": "/shells.html",
+        "label": "Shellit"
       }
     ]
   },
   "about": {
     "title": "Hostingvertailu.info",
     "summary": ""
+  },
+  "products": {
+    "webhotels" : {
+      "title": "Webhotellit",
+      "summary": "Suomen webhotellit vertailussa.",
+      "thead": {
+        "provider": "Palveluntarjoaja",
+        "name": "Palvelun nimi",
+        "disk": "Levytila",
+        "price": "Hinta €/vuosi"
+      }
+    },
+    "dns" : {
+      "title": "Nimipalvelut"
+    },
+    "shells"    : {
+      "title": "Shellit"
+    }
   },
   "footer": {
     "copyright": "Copyright",

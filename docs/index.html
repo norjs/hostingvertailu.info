@@ -1,12 +1,54 @@
 ---
 layout: page
-title: "about.title"
-description: "about.summary"
+title: "products.webhotels.title"
+description: "products.webhotels.summary"
 image: /assets/images/site-image.jpg
 ---
 
 {%- assign className = site.data.className -%}
 {%- assign translation = site.data.lang[site.lang] -%}
+{%- assign services = site.data.services | sort: 'price_year.sum' -%}
 
-<h3>Hostingvertailu.info</h3>
+<section class="{{ className.products }}">
 
+    <h3>{{translation.products.webhotels.title}}</h3>
+
+    <table class="{{ className.products }}">
+
+        <thead>
+            <tr>
+                <th class="{{ className.provider }}">{{ translation.products.webhotels.thead.provider }}</th>
+                <th class="{{ className.name }}">{{ translation.products.webhotels.thead.name }}</th>
+                <th class="{{ className.disk }}">{{ translation.products.webhotels.thead.disk }}</th>
+                <th class="{{ className.price }}">{{ translation.products.webhotels.thead.price }}</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {%- for service in services -%}
+
+            {%- assign year_vat_times = service.price_year.vat | plus: 1 -%}
+
+            <tr>
+                <td class="{{ className.provider }}">{{ service.provider }}</td>
+                <td class="{{ className.name }}">
+
+                    <a href="{{ service.href }}" target="_blank">{{ service.name | strip }}</a>
+
+                    {% if service.conditions and service.conditions.size >= 1 -%}
+                    | {{ service.conditions }}
+                    {%- endif -%}
+
+                </td>
+                <td class="{{ className.disk }}">{{ service.ft_disk }} GB</td>
+                <td class="{{ className.price }}">{{ service.price_year.sum | money_without_currency }} €</td>
+            </tr>
+
+        {%- endfor -%}
+        </tbody>
+
+    </table>
+
+    <p>Hinnat esitelty ilman mahdollisia veroja (esim. ALV 24%).</p>
+
+</section>
