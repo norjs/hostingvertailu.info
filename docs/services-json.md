@@ -1,3 +1,13 @@
+### Yleistä tietojen päivityksestä
+
+Tämä projekti sijaitsee Githubissa AGPL-lisenssillä vapaan lähdekoodin projektina.
+
+Vertailun tietoja voi kuka tahansa päivittää ja otamme vastaan pull-requesteja tavalliseen tapaan Githubissa. 
+
+Jos olette palveluntajoaja ja haluatte meidän lisäävän puolestanne tietoja avaimet käteen -ratkaisuna, ottakaa yhteyttä 
+[asiakaspalveluumme](https://ohjelmistoarkkitehti.fi/). Tästä veloitamme kuitenkin työn perusteella tuntihinnastomme 
+mukaisen korvauksen.
+
 ### [`services.json`](https://github.com/sendanor/hostingvertailu.info/blob/master/docs/_data/services.json)
 
  * `provider` -- Palveluntarjoaja
