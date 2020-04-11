@@ -9,7 +9,12 @@
  * `price_month` -- Kuukausihinta. Katso formaatti `price_start`.
  * `price_year` -- Hinta kerralla koko vuodesta. Katso formaatti `price_start`.
  * `conditions` -- Jos tuotteessa/palvelussa on ehtoja
+ * `ft_virtuals` -- Numero. Virtuaalipalvelimien määrä (full virtualization, esim. KVM)
+ * `ft_containers` -- Numero. Kevyiden virtuaalipalvelimien määrä (kontit, esim. LXC)
+ * `ft_root` -- Boolean. Onko asiakkaalla palvelimelle pääkäyttäjän oikeudet?
  * `ft_disk` -- Levytila gigatavuina. Pienemmät määreet voi merkitä desimaaleina.
+ * `ft_memory` -- Muistin määrä (GB).
+ * `ft_cpu` -- CPU corejen määrä.
  * `ft_ssh` -- Palvelimelle voi ottaa yhteyttä SSH:lla ja ajaa komentoja.
  * `ft_scp` -- Palvelimelle voi ottaa yhteyttä SCP:lla.
  * `ft_noncommercial` -- Jos määritetty, ainoastaan ei-kaupallinen toiminta on sallittua.
@@ -33,6 +38,7 @@
  * `ft_domain` -- Numero. Monelleko verkkotunnukselle palveluun sisältyy rekisteröintimaksu ilman lisämaksua?
  * `ft_email` -- Sisältyykö palveluun sähköpostilaatikoita?
  * `ft_ssi` -- Onko webpalvelimella käytettävissä SSI-tukea?
+ * `ft_traffic` -- Liikenteen suositeltu määrä tai maksimimäärä (GB/kk)
  * `delivery_days` -- Kuinka monessa päivässä viimeistään tilaus käsitellään?
  
 `ft_` -alkuiset arvot voivat olla: 

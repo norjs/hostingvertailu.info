@@ -14,6 +14,10 @@
         "label": "Webhotellit"
       },
       {
+        "href": "/virtuals.html",
+        "label": "Virtuaalipalvelimet"
+      },
+      {
         "href": "/dns.html",
         "label": "Nimipalvelut"
       },
