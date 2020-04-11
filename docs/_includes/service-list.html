@@ -33,10 +33,11 @@
                     {%- endif -%}
 
                     {% if service.ft_noncommercial %}
-                    <span class="fa-stack">
+                    <span class="fa-stack" aria-hidden="true" title="Kaupallinen toiminta kielletty">
                       <i class="fa fa-credit-card fa-stack-1x"></i>
                       <i class="fa fa-ban fa-stack-2x text-danger"></i>
                     </span>
+                    <span class="sr-only">Kaupallinen toiminta kielletty</span>
                     {% endif %}
 
                 </td>
