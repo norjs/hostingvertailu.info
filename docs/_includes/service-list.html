@@ -70,6 +70,11 @@
                     <span class="sr-only">Pääkäyttäjän oikeudet käytettävissä (root)</span>
                     {% endif %}
 
+                    {% if service.ft_email >= 1 %}
+                    <i class="fa fa-envelope" aria-hidden="true" title="Sähköpostilaatikoita sisältyy ({{ service.ft_email }} kpl)"></i>
+                    <span class="sr-only">Sähköpostilaatikoita sisältyy ({{ service.ft_email }} kpl)</span>
+                    {% endif %}
+
                 </td>
                 <td class="{{ className.disk }}">{{ service.ft_disk }} GB</td>
                 <td class="{{ className.price }}">{{ service.price_year.sum | round }} €</td>
