@@ -21,6 +21,8 @@ Muutoksia tai lisäkenttiä dataformaattiin voi ehdottaa [Githubissa](https://gi
  * `price_month` -- Kuukausihinta. Sama formaatti kuin `price_start`.
  * `price_year` -- Hinta kerralla koko vuodesta. Sama formaatti kuin `price_start`.
  * `conditions` -- Merkkijono, jos tuotteessa/palvelussa on ylimääräisiä ehtoja
+ * `ft_fi` -- Boolean. Ovatko palvelimet Suomessa?
+ * `ft_eu` -- Boolean. Ovatko palvelimet EU:ssa?
  * `ft_virtuals` -- Numero. Virtuaalipalvelimien määrä (full virtualization, esim. KVM)
  * `ft_containers` -- Numero. Kevyiden virtuaalipalvelimien määrä (kontit, esim. LXC)
  * `ft_root` -- Boolean. Onko asiakkaalla palvelimelle pääkäyttäjän oikeudet?
