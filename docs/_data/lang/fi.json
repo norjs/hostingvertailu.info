@@ -65,8 +65,8 @@
     "footerText": "Hinnat esitelty ilman mahdollisia veroja (esim. ALV 24%)."
   },
   "features": {
-    "ft_ssh": "SSH-tunnus sisältyy hintaan, mutta ei ole suunniteltu perinteiseen shellikäyttöön (esim. irkkaaminen ei välttämättä ole mahdollista)",
-    "ft_shell": "SSH-tunnus sisältyy hintaan ja on suunniteltu shellikäyttöön (esim. irkkaaminen on mahdollista)",
+    "ft_ssh": "SSH-tunnus sisältyy hintaan, mutta ei sovellu perinteiseen shellikäyttöön (esim. irkkaaminen ei välttämättä ole mahdollista)",
+    "ft_shell": "SSH-tunnus sisältyy hintaan ja soveltuu shellikäyttöön (esim. irkkaaminen on mahdollista)",
     "ft_email": "Sähköpostilaatikoita sisältyy",
     "ft_root": "Pääkäyttäjän oikeudet käytettävissä (root)",
     "ft_mysql_postgresql": "Tietokanta sisältyy hintaan (MySQL/PostgreSQL)",
