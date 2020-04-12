@@ -61,7 +61,20 @@
     "email"    : {
       "title": "Sähköposti",
       "summary": "Suomen sähköpostit vertailussa."
-    }
+    },
+    "footerText": "Hinnat esitelty ilman mahdollisia veroja (esim. ALV 24%)."
+  },
+  "features": {
+    "ft_ssh": "SSH-tunnus sisältyy hintaan, mutta ei ole suunniteltu perinteiseen shellikäyttöön (esim. irkkaaminen ei välttämättä ole mahdollista)",
+    "ft_shell": "SSH-tunnus sisältyy hintaan ja on suunniteltu shellikäyttöön (esim. irkkaaminen on mahdollista)",
+    "ft_email": "Sähköpostilaatikoita sisältyy",
+    "ft_root": "Pääkäyttäjän oikeudet käytettävissä (root)",
+    "ft_mysql_postgresql": "Tietokanta sisältyy hintaan (MySQL/PostgreSQL)",
+    "ft_postgresql": "Tietokanta sisältyy hintaan (PostgreSQL)",
+    "ft_mysql": "Tietokanta sisältyy hintaan (MySQL)",
+    "ft_backup": "Varmuuskopiointi sisältyy hintaan",
+    "ft_noncommercial": "Kaupallinen toiminta kielletty",
+    "ft_fi": "Palvelin sijaitsee Suomessa"
   },
   "footer": {
     "copyright": "Copyright",

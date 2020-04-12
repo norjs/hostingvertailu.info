@@ -33,31 +33,31 @@
                     {%- endif -%}
 
                     {% if service.ft_fi %}
-                    <span class="flag-icon flag-icon-fi" title="Palvelin Suomessa"></span>
-                    <span class="sr-only">Palvelin Suomessa</span>
+                    <span class="flag-icon flag-icon-fi" title="{{ translation.features.ft_fi }}"></span>
+                    <span class="sr-only">{{ translation.features.ft_fi }}</span>
                     {% endif %}
 
                     {% if service.ft_noncommercial %}
-                    <span class="fa-stack" aria-hidden="true" title="Kaupallinen toiminta kielletty">
+                    <span class="fa-stack" aria-hidden="true" title="{{ translation.features.ft_noncommercial }}">
                       <i class="fa fa-credit-card fa-stack-1x"></i>
                       <i class="fa fa-ban fa-stack-2x text-danger"></i>
                     </span>
-                    <span class="sr-only">Kaupallinen toiminta kielletty</span>
+                    <span class="sr-only">{{ translation.features.ft_noncommercial }}</span>
                     {% endif %}
 
                     {% if service.ft_backup %}
-                    <i class="fa fa-hdd-o" title="Varmuuskopiointi sisältyy hintaan"></i>
-                    <span class="sr-only">Varmuuskopiointi sisältyy hintaan</span>
+                    <i class="fa fa-hdd-o" title="{{ translation.features.ft_backup }}"></i>
+                    <span class="sr-only">{{ translation.features.ft_backup }}</span>
                     {% endif %}
 
                     {% if service.ft_mysql or service.ft_postgresql %}
 
                         {% if service.ft_mysql and service.ft_postgresql %}
-                            {% assign db_title="Tietokanta sisältyy hintaan (MySQL/PostgreSQL)" %}
+                            {% assign db_title=translation.features.ft_mysql_postgresql %}
                         {% elsif service.ft_mysql %}
-                            {% assign db_title="Tietokanta sisältyy hintaan (MySQL)" %}
+                            {% assign db_title=translation.features.ft_mysql %}
                         {% else %}
-                            {% assign db_title="Tietokanta sisältyy hintaan (PostgreSQL)" %}
+                            {% assign db_title=translation.features.ft_postgresql %}
                         {% endif %}
 
                         <i class="fa fa-database" title="{{db_title}}"></i>
@@ -66,21 +66,21 @@
                     {% endif %}
 
                     {% if service.ft_root %}
-                    <i class="fa fa-unlock-alt" aria-hidden="true" title="Pääkäyttäjän oikeudet käytettävissä (root)"></i>
-                    <span class="sr-only">Pääkäyttäjän oikeudet käytettävissä (root)</span>
+                    <i class="fa fa-unlock-alt" aria-hidden="true" title="{{ translation.features.ft_root }}"></i>
+                    <span class="sr-only">{{ translation.features.ft_root }}</span>
                     {% endif %}
 
                     {% if service.ft_email >= 1 %}
-                    <i class="fa fa-envelope" aria-hidden="true" title="Sähköpostilaatikoita sisältyy ({{ service.ft_email }} kpl)"></i>
-                    <span class="sr-only">Sähköpostilaatikoita sisältyy ({{ service.ft_email }} kpl)</span>
+                    <i class="fa fa-envelope" aria-hidden="true" title="{{ translation.features.ft_email }} ({{ service.ft_email }} kpl)"></i>
+                    <span class="sr-only">({{ service.ft_email }} kpl) {{ translation.features.ft_email }}</span>
                     {% endif %}
 
                     {% if service.ft_shell >= 1 %}
-                    <i class="fa fa-terminal" aria-hidden="true" title="Shell-tunnus sisältyy hintaan ({{ service.ft_shell }} kpl)"></i>
-                    <span class="sr-only">Shell-tunnus sisältyy hintaan ({{ service.ft_shell }} kpl)</span>
+                    <i class="fa fa-terminal" aria-hidden="true" title="{{ translation.features.ft_shell }} ({{ service.ft_shell }} kpl)"></i>
+                    <span class="sr-only">({{ service.ft_shell }} kpl) {{ translation.features.shell }}</span>
                     {% elsif service.ft_ssh >= 1 %}
-                    <i class="fa fa-terminal" aria-hidden="true" title="SSH sisältyy hintaan, mutta ei kokonainen shelli ({{ service.ft_ssh }} kpl)"></i>
-                    <span class="sr-only">SSH sisältyy hintaan, mutta ei kokonainen shelli ({{ service.ft_ssh }} kpl)</span>
+                    <i class="fa fa-terminal" aria-hidden="true" title="{{ translation.features.ft_ssh }} ({{ service.ft_ssh }} kpl)"></i>
+                    <span class="sr-only">({{ service.ft_ssh }} kpl) {{ translation.features.ft_ssh }}</span>
                     {% endif %}
 
                 </td>
@@ -93,6 +93,6 @@
 
     </table>
 
-    <p>Hinnat esitelty ilman mahdollisia veroja (esim. ALV 24%).</p>
+    <p>{{ translation.products.footerText }}</p>
 
 </section>
