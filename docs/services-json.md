@@ -10,7 +10,7 @@ mukaisen korvauksen.
 
 Muutoksia tai lisäkenttiä dataformaattiin voi ehdottaa [Githubissa](https://github.com/sendanor/hostingvertailu.info/issues).
 
-### [`services.json`](https://github.com/sendanor/hostingvertailu.info/blob/master/docs/_data/services.json)
+### [`all_services.json`](https://github.com/sendanor/hostingvertailu.info/blob/master/docs/_data/all_services.json)
 
 This file will be compiled from provider specific `_data/services/*.json` files.
  

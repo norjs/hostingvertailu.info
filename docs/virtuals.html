@@ -7,7 +7,7 @@ image: /assets/images/site-image.jpg
 
 {%- assign className = site.data.className -%}
 {%- assign translation = site.data.lang[site.lang] -%}
-{%- assign services = site.data.services | where_exp: "item", "item.ft_virtuals >= 1" -%}
+{%- assign services = site.data.all_services | where_exp: "item", "item.ft_virtuals >= 1" -%}
 
 {% include service-list.html type="virtuals" services = services %}
 

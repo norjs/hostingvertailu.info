@@ -187,7 +187,10 @@ section#{$products} {
 
     #{$price} {
       text-align: right;
+    }
 
+    #{$price_vat} {
+      text-align: right;
     }
 
   }

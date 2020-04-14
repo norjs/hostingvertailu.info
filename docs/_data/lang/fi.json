@@ -43,7 +43,8 @@
         "provider": "Palveluntarjoaja",
         "name": "Palvelun nimi",
         "disk": "Levytila",
-        "price": "Hinta €/vuosi"
+        "price": "Veroton<br>\n€/vuosi",
+        "price_vat": "Verollinen<br>\n€/vuosi"
       }
     },
     "dns" : {
@@ -62,7 +63,7 @@
       "title": "Sähköposti",
       "summary": "Suomen sähköpostit vertailussa."
     },
-    "footerText": "Hinnat esitelty ilman mahdollisia veroja (esim. ALV 24%)."
+    "footerText": ""
   },
   "features": {
     "ft_ssh": "SSH-tunnus sisältyy hintaan, mutta ei sovellu perinteiseen shellikäyttöön (esim. irkkaaminen ei välttämättä ole mahdollista)",

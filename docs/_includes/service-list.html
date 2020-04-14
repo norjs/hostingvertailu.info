@@ -14,6 +14,7 @@
                 <th class="{{ className.name }}">{{ translation.products.webhotels.thead.name }}</th>
                 <th class="{{ className.disk }}">{{ translation.products.webhotels.thead.disk }}</th>
                 <th class="{{ className.price }}">{{ translation.products.webhotels.thead.price }}</th>
+                <th class="{{ className.price_vat }}">{{ translation.products.webhotels.thead.price_vat }}</th>
             </tr>
         </thead>
 
@@ -86,6 +87,7 @@
                 </td>
                 <td class="{{ className.disk }}">{{ service.ft_disk }} GB</td>
                 <td class="{{ className.price }}">{{ service.price_year.sum | round }} €</td>
+                <td class="{{ className.price }}">{{ service.price_year.sum_vat | round }} €</td>
             </tr>
 
         {%- endfor -%}

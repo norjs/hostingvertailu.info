@@ -7,6 +7,7 @@
   "name": "hv-pn",
   "disk": "hv-pi",
   "price": "hv-pr",
+  "price_vat": "hv-prv",
   "textHeightImage": "hv-thi",
   "verticalNav": "hv-nv",
   "navItem": "hv-ni",
