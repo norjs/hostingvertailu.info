@@ -1,5 +1,7 @@
 {
   "headerLogo"           : ".hv-hl",
+  "footerPostLinks"      : ".hv-fpl",
+  "footerCopyright"      : ".hv-fcp",
   "products"             : ".hv-p",
   "provider"             : ".hv-pp",
   "name"                 : ".hv-pn",

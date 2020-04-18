@@ -19,6 +19,10 @@ body {
 
   & > header {
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
     box-sizing: border-box;
     width: 100%;
     color: #ffffff;
@@ -27,6 +31,9 @@ body {
     vertical-align: middle;
 
     h1 {
+
+      flex: 1;
+
       font-size: 23px;
       padding: 16px 32px;
       margin: 0;
@@ -40,6 +47,7 @@ body {
     }
 
     a {
+      color: #ffffff;
       text-decoration: none;
     }
 
@@ -118,7 +126,10 @@ body {
       padding: 0 2em 2em 2em;
       box-sizing: border-box;
       background-color: $primary-content-color;
-      border-radius: 8px 0 0 0;
+      overflow-x: scroll;
+
+      // If there's nav
+      //border-radius: 8px 0 0 0;
 
     }
 
@@ -127,13 +138,34 @@ body {
   & > footer {
 
     background-color: #222222;
-    padding: 1em 2em;
-    text-align: right;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     a {
       color: #f0f0f0;
       text-decoration: none;
     }
+
+    & > section {
+
+      flex: 1 0 auto;
+
+      &#{$footer-post-links} {
+        text-align: left;
+        padding: 1em 1em 1em 2em;
+      }
+
+      &#{$footer-copyright} {
+        text-align: right;
+        padding: 1em 2em 1em 1em;
+      }
+
+    }
+
 
   }
 
@@ -262,13 +294,14 @@ img.logo {
   height: 2em;
 }
 
-#{$vertical-nav} {
+nav {
 
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: #ffffff;
   background-color: #111111;
+  flex-wrap: wrap;
 
   a, a:visited, a:hover {
     display: inline-block;
@@ -278,6 +311,11 @@ img.logo {
   }
 
   & > #{$nav-item} {
+
+    flex: 1 0 auto;
+
+    display: flex;
+    align-items: center;
     padding: 0;
     margin: 0;
 
@@ -285,6 +323,7 @@ img.logo {
       padding: 0.5em 1em;
       box-sizing: border-box;
     }
+
   }
 
   & > #{$nav-item}:hover {
@@ -319,6 +358,12 @@ img.logo {
     a, a:visited, a:hover {
       color: #ffffff;
     }
+
+  }
+
+  &#{$vertical-nav} {
+
+    flex-direction: column;
 
   }
 

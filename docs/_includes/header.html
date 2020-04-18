@@ -2,14 +2,8 @@
 {%- assign translation = site.data.lang[site.lang] -%}
 <header>
 
-    <h1>
+    <h1><a href="{{ translation.siteUrl | absolute_url }}">{{ translation.siteTitle | strip }}</a></h1>
 
-        <div class="{{ className.headerLogo }}">
-            <a href="{{ translation.siteUrl | absolute_url }}"><img class="{{ className.textHeightImage }}" src="/assets/images/logo-vertical.png" alt=""></a>
-        </div>
-
-        {{ translation.siteTitle }}
-
-    </h1>
+    {% include nav.html %}
 
 </header>

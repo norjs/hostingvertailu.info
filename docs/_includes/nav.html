@@ -1,6 +1,6 @@
 {%- assign className = site.data.className -%}
 {%- assign translation = site.data.lang[site.lang] -%}
-<nav class="{{ className.verticalNav }}">
+<nav>
   {%- for link in translation.nav.items -%}
     {%- if link.href == page.url -%}
     <span class="{{ className.navItem }} {{ className.selectedNavItem }}"><a href="{{link.href}}">{{ link.label }}</a></span>
