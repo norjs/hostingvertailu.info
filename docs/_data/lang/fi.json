@@ -43,8 +43,9 @@
         "provider": "Palveluntarjoaja",
         "name": "Palvelun nimi",
         "disk": "Levytila",
-        "price": "Veroton<br>\n€/vuosi",
-        "price_vat": "Verollinen<br>\n€/vuosi"
+        "novat": "Veroton hinta",
+        "vat": "Verollinen hinta",
+        "eur_year": "€/vuosi"
       }
     },
     "dns" : {

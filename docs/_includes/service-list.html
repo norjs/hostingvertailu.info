@@ -1,105 +1,90 @@
 {%- assign className = site.data.className -%}
 {%- assign translation = site.data.lang[site.lang] -%}
-{%- assign services = include.services | sort: 'price_year.sum' -%}
+{%- assign services = include.services -%}
 
 <section class="{{ className.products }}">
 
-    <h3>{{ translation.products[include.type].title }}</h3>
+    <h3>
 
-    <table class="{{ className.products }}">
+        <span class="title">{{ translation.products[include.type].title }}</span>
 
-        <thead>
-            <tr>
-                <th class="{{ className.provider }}">{{ translation.products.webhotels.thead.provider | strip }}<br />
-                    {{ translation.products.webhotels.thead.name | strip }}</th>
-                <th class="{{ className.disk }}">{{ translation.products.webhotels.thead.disk | strip }}</th>
-                <th class="{{ className.price }}">{{ translation.products.webhotels.thead.price | strip }}</th>
-                <th class="{{ className.price_vat }}">{{ translation.products.webhotels.thead.price_vat | strip }}</th>
-            </tr>
-        </thead>
+        <span class="vat-link"><a id="display-novat" href="#novat">{{ translation.products.webhotels.thead.novat | strip }}</a></span>
+        <span class="vat-link"><a id="display-vat" href="#vat">{{ translation.products.webhotels.thead.vat | strip }}</a></span>
 
-        <tbody>
-        {%- for service in services -%}
+    </h3>
 
-            {%- assign year_vat_times = service.price_year.vat | plus: 1 -%}
+    {% include service-table.html services=services displayVat=false classes=className.novatProducts %}
 
-            <tr>
-                <td class="{{ className.name }}">
-
-                    {{ service.provider | strip }}
-                    <br />
-
-                    <a href="{{ service.href }}" target="_blank">{{ service.name | strip }}</a>
-
-                    {% if service.conditions and service.conditions.size >= 1 -%}
-                    <br />
-                    {{ service.conditions | strip }}
-                    {%- endif -%}
-
-                    <br />
-
-                    {% if service.ft_fi %}
-                    <span class="flag-icon flag-icon-fi" title="{{ translation.features.ft_fi }}"></span>
-                    <span class="sr-only">{{ translation.features.ft_fi }}</span>
-                    {% endif %}
-
-                    {% if service.ft_noncommercial %}
-                    <span class="fa-stack" aria-hidden="true" title="{{ translation.features.ft_noncommercial }}">
-                      <i class="fa fa-credit-card fa-stack-1x"></i>
-                      <i class="fa fa-ban fa-stack-2x text-danger"></i>
-                    </span>
-                    <span class="sr-only">{{ translation.features.ft_noncommercial }}</span>
-                    {% endif %}
-
-                    {% if service.ft_backup %}
-                    <i class="fa fa-hdd-o" title="{{ translation.features.ft_backup }}"></i>
-                    <span class="sr-only">{{ translation.features.ft_backup }}</span>
-                    {% endif %}
-
-                    {% if service.ft_mysql or service.ft_postgresql %}
-
-                        {% if service.ft_mysql and service.ft_postgresql %}
-                            {% assign db_title=translation.features.ft_mysql_postgresql %}
-                        {% elsif service.ft_mysql %}
-                            {% assign db_title=translation.features.ft_mysql %}
-                        {% else %}
-                            {% assign db_title=translation.features.ft_postgresql %}
-                        {% endif %}
-
-                        <i class="fa fa-database" title="{{db_title}}"></i>
-                        <span class="sr-only">{{db_title | strip}}</span>
-
-                    {% endif %}
-
-                    {% if service.ft_root %}
-                    <i class="fa fa-unlock-alt" aria-hidden="true" title="{{ translation.features.ft_root }}"></i>
-                    <span class="sr-only">{{ translation.features.ft_root }}</span>
-                    {% endif %}
-
-                    {% if service.ft_email >= 1 %}
-                    <i class="fa fa-envelope" aria-hidden="true" title="{{ translation.features.ft_email }} ({{ service.ft_email }} kpl)"></i>
-                    <span class="sr-only">({{ service.ft_email }} kpl) {{ translation.features.ft_email }}</span>
-                    {% endif %}
-
-                    {% if service.ft_shell >= 1 %}
-                    <i class="fa fa-terminal" aria-hidden="true" title="{{ translation.features.ft_shell }} ({{ service.ft_shell }} kpl)"></i>
-                    <span class="sr-only">({{ service.ft_shell }} kpl) {{ translation.features.shell }}</span>
-                    {% elsif service.ft_ssh >= 1 %}
-                    <i class="fa fa-terminal" aria-hidden="true" title="{{ translation.features.ft_ssh }} ({{ service.ft_ssh }} kpl)"></i>
-                    <span class="sr-only">({{ service.ft_ssh }} kpl) {{ translation.features.ft_ssh }}</span>
-                    {% endif %}
-
-                </td>
-                <td class="{{ className.disk }}">{{ service.ft_disk }} GB</td>
-                <td class="{{ className.price }}">{{ service.price_year.sum | round }} €</td>
-                <td class="{{ className.price }}">{{ service.price_year.sum_vat | round }} €</td>
-            </tr>
-
-        {%- endfor -%}
-        </tbody>
-
-    </table>
+    {% include service-table.html services=services displayVat=true classes=className.vatProducts %}
 
     <p>{{ translation.products.footerText }}</p>
+
+    <script>
+
+        var UPDATE_VAT_HASH_LOCATOR = 'a.{{className.updateVatHash}}';
+        var DISPLAY_NOVAT_LOCATOR = '#display-novat';
+        var DISPLAY_VAT_LOCATOR = '#display-vat';
+
+        var NOVAT_LOCATOR = '.{{className.novatProducts}}';
+        var VAT_LOCATOR = '.{{className.vatProducts}}';
+        var SHOW_VAT = true;
+
+        function updateVatHashes () {
+            $(UPDATE_VAT_HASH_LOCATOR).each(function () {
+
+                var href = $(this).attr('href');
+
+                if (href.indexOf('#') >= 0) {
+                    $(this).attr('href', href.replace(/#.*/, SHOW_VAT ? '#vat' : '#novat'));
+                } else if (!SHOW_VAT) {
+                    $(this).attr('href', href + '#novat' );
+                }
+
+            });
+        }
+
+        $(document).ready(function () {
+
+            if (location.hash.indexOf('novat') >= 0) {
+                SHOW_VAT = false;
+            }
+
+            $(DISPLAY_NOVAT_LOCATOR).click(function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                $(NOVAT_LOCATOR).show();
+                $(VAT_LOCATOR).hide();
+                SHOW_VAT = false;
+                location.hash = 'novat';
+                $(DISPLAY_NOVAT_LOCATOR).hide();
+                $(DISPLAY_VAT_LOCATOR).show();
+                updateVatHashes();
+            });
+
+            $(DISPLAY_VAT_LOCATOR).click(function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                $(NOVAT_LOCATOR).hide();
+                $(VAT_LOCATOR).show();
+                SHOW_VAT = true;
+                location.hash = 'vat';
+                $(DISPLAY_VAT_LOCATOR).hide();
+                $(DISPLAY_NOVAT_LOCATOR).show();
+                updateVatHashes();
+            });
+
+            if (SHOW_VAT) {
+                $(NOVAT_LOCATOR).hide();
+                $(DISPLAY_VAT_LOCATOR).hide();
+            } else {
+                $(VAT_LOCATOR).hide();
+                $(DISPLAY_NOVAT_LOCATOR).hide();
+            }
+
+            updateVatHashes();
+
+        });
+
+    </script>
 
 </section>

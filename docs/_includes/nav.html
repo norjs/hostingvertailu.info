@@ -3,9 +3,9 @@
 <nav>
   {%- for link in translation.nav.items -%}
     {%- if link.href == page.url -%}
-    <span class="{{ className.navItem }} {{ className.selectedNavItem }}"><a href="{{link.href}}">{{ link.label }}</a></span>
+    <span class="{{ className.navItem }} {{ className.selectedNavItem }}"><a class="{{ className.updateVatHash }}" href="{{link.href}}">{{ link.label }}</a></span>
     {%- else -%}
-    <span class="{{ className.navItem }}"><a href="{{link.href}}">{{ link.label }}</a></span>
+    <span class="{{ className.navItem }}"><a class="{{ className.updateVatHash }}" href="{{link.href}}">{{ link.label }}</a></span>
     {%- endif -%}
   {%- endfor -%}
 </nav>
