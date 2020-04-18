@@ -10,11 +10,11 @@
 
         <thead>
             <tr>
-                <th class="{{ className.provider }}">{{ translation.products.webhotels.thead.provider }}</th>
-                <th class="{{ className.name }}">{{ translation.products.webhotels.thead.name }}</th>
-                <th class="{{ className.disk }}">{{ translation.products.webhotels.thead.disk }}</th>
-                <th class="{{ className.price }}">{{ translation.products.webhotels.thead.price }}</th>
-                <th class="{{ className.price_vat }}">{{ translation.products.webhotels.thead.price_vat }}</th>
+                <th class="{{ className.provider }}">{{ translation.products.webhotels.thead.provider | strip }}<br />
+                    {{ translation.products.webhotels.thead.name | strip }}</th>
+                <th class="{{ className.disk }}">{{ translation.products.webhotels.thead.disk | strip }}</th>
+                <th class="{{ className.price }}">{{ translation.products.webhotels.thead.price | strip }}</th>
+                <th class="{{ className.price_vat }}">{{ translation.products.webhotels.thead.price_vat | strip }}</th>
             </tr>
         </thead>
 
@@ -24,14 +24,19 @@
             {%- assign year_vat_times = service.price_year.vat | plus: 1 -%}
 
             <tr>
-                <td class="{{ className.provider }}">{{ service.provider }}</td>
                 <td class="{{ className.name }}">
+
+                    {{ service.provider | strip }}
+                    <br />
 
                     <a href="{{ service.href }}" target="_blank">{{ service.name | strip }}</a>
 
                     {% if service.conditions and service.conditions.size >= 1 -%}
-                    | {{ service.conditions }}
+                    <br />
+                    {{ service.conditions | strip }}
                     {%- endif -%}
+
+                    <br />
 
                     {% if service.ft_fi %}
                     <span class="flag-icon flag-icon-fi" title="{{ translation.features.ft_fi }}"></span>
@@ -62,7 +67,7 @@
                         {% endif %}
 
                         <i class="fa fa-database" title="{{db_title}}"></i>
-                        <span class="sr-only">{{db_title}}</span>
+                        <span class="sr-only">{{db_title | strip}}</span>
 
                     {% endif %}
 
