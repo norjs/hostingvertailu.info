@@ -1014,7 +1014,7 @@
       "vat": 0.24,
       "sum_vat": 4.96
     },
-    "conditions": "Website must have their ad banner embedded.",
+    "conditions": "Sivustolle täytyy upottaa heidän mainosbanneri.",
     "ft_disk": 1,
     "ft_ssh": 1,
     "ft_scp": 1,
@@ -1054,7 +1054,7 @@
       "vat": 0.24,
       "sum_vat": 9.92
     },
-    "conditions": "Website must have their ad banner embedded.",
+    "conditions": "Sivustolle täytyy upottaa heidän mainosbanneri.",
     "ft_disk": 2,
     "ft_ssh": 1,
     "ft_scp": 1,
